@@ -1,0 +1,516 @@
+/* ==============================
+   RESET & BASE STYLES
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* use Poppins consistently */
+}
+
+
+
+/* Dark transparent AI-themed background */
+body {
+  min-height: 100vh;
+  color: #f1f5f9; /* light text */
+  position: relative;
+  line-height: 1.6;
+
+  /* Semi-transparent overlay + AI background */
+  background: url('/static/images/bg-services-ai.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* Overlay with transparency */
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Transparent dark overlay */
+  background: rgba(15, 23, 42, 0.6); /* adjust opacity 0.5–0.85 */
+  backdrop-filter: blur(6px);        /* optional glass blur */
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1; /* ensures content is above overlay */
+}
+
+
+/* ==============================
+   LINKS & IMAGES
+============================== */
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+.btn-primary {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+  border: 2px solid #6c5ce7;
+  color: #6c5ce7;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #6c5ce7;
+  color: #fff;
+}
+
+/* ==============================
+   CARDS / GLASS EFFECT
+============================== */
+.card,
+.blog-card,
+.services-section,
+.industries li,
+.tech-stack li {
+  background: rgba(255, 255, 255, 0.07); /* semi-transparent */
+  backdrop-filter: blur(12px);           /* glassy blur */
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 15px;
+  color: white; /* light text */
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.card:hover,
+.blog-card:hover,
+.services-section:hover,
+.industries li:hover,
+.tech-stack li:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.card h3,
+.blog-card h3 {
+  margin: 20px 0 15px;
+  color: #fff;
+}
+
+.card p,
+.card ul,
+.blog-card p,
+.blog-card ul {
+  color: #eee;
+}
+
+.card ul li,
+.blog-card ul li {
+  margin-bottom: 5px;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
+.navbar-cta {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 5%;
+  position: relative; /* needed for overlay */
+  background: url('/static/images/bg-hero-ai.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Glassy dark overlay for hero background */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(171, 194, 247, 0.6), /* soft light blue */
+    rgba(15, 23, 42, 0.6)     /* deep dark overlay */
+  );
+  backdrop-filter: blur(8px);
+  z-index: 0; /* behind content */
+}
+
+/* Container to bring content above overlay */
+.hero-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Glassy side panel (for image or content) */
+.hero-side {
+  background: rgba(255, 255, 255, 0.07); /* semi-transparent glass */
+  backdrop-filter: blur(12px);           /* glassy blur */
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 400px; /* adjust size as needed */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+/* Optional: hover effect for side panel */
+.hero-side:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Gradient text inside hero content */
+.gradient-text {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #fff; /* changed to light text for dark bg */
+}
+
+.hero-description {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #eee; /* light text for readability */
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.hero-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #fff; /* light text for features */
+}
+
+.hero-buttons a {
+  margin-right: 15px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.hero-stat h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #6c5ce7;
+}
+
+.hero-stat p {
+  font-size: 14px;
+  color: #eee; /* light text for stats */
+}
+
+.hero-image img {
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ==============================
+   CLIENTS SECTION
+============================== */
+.clients {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('/static/images/bg-services-ai.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.clients h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.clients p {
+  font-size: 16px;
+  color: #eee;
+  margin-bottom: 40px;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+.client-logo img {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.client-logo img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* ==============================
+   SERVICES
+============================== */
+.services {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('/static/images/bg-services-ai.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.services h2,
+.services p {
+  color: #fff;
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.07); /* glass effect */
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 25px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.card h3,
+.card p,
+.card ul li {
+  color: #fff;
+}
+
+/* ==============================
+   PORTFOLIO
+============================== */
+.portfolio {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('/static/images/bg-services-ai.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.portfolio h2,
+.portfolio p {
+  color: #fff;
+}
+
+.portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+
+.project h3,
+.project p,
+.project ul li {
+  color: #fff;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* ==============================
+   TEAM
+============================== */
+.team {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('/static/images/bg-services-ai.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.team .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card h3 {
+  margin-top: 15px;
+  color: #fff;
+}
+
+/* ==============================
+   BLOG
+============================== */
+.blog {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('/static/images/bg-services-ai.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.blog .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-category,
+.blog-meta,
+.blog-content p {
+  color: #fff;
+}
+
+/* ==============================
+   CTA SECTION
+============================== */
+.cta {
+  padding: 80px 5%;
+  text-align: center;
+  border-radius: 20px;
+  margin: 50px 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('/static/images/bg-services-ai.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.cta h2,
+.cta-subtitle,
+.cta-feature,
+.cta-stats h3 {
+  color: #fff;
+}
+
+.cta-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.cta-buttons a {
+  margin-right: 15px;
+}

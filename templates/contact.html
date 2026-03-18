@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact - NextGen AI
+{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+{% endblock %}
+
+{% block content %} 
+
+
+
+
+
+<section class="consultation-section">
+    <div class="container">
+        <h1>Start Your AI Transformation</h1>
+        <p class="intro">
+            Book a free AI consultation with our experts. Fill out the form below and we'll help you explore how AI can automate, optimize, and grow your business.
+        </p>
+
+        <form method="POST" class="consultation-form">
+       
+
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="business">Business Type / Industry</label>
+                <input type="text" id="business" name="business" placeholder="E-commerce, Healthcare, Finance, etc." required>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Interested AI Service</label>
+                <select id="service" name="service">
+                    <option value="">Select Service</option>
+                    <option value="automation">AI Automation</option>
+                    <option value="chatbots">AI Chatbots</option>
+                    <option value="content">AI Content Creation</option>
+                    <option value="voice-agents">AI Voice Agents</option>
+                    <option value="image-video">AI Image & Video</option>
+                    <option value="custom-solutions">Custom AI Solutions</option>
+                    <option value="marketing">AI Marketing Automation</option>
+                    <option value="web-dev">Web & App Development</option>
+                    <option value="data-analytics">Data Analytics & Insights</option>
+                    <option value="consulting">AI Consulting</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Tell Us About Your Project</label>
+                <textarea id="message" name="message" placeholder="Describe your business needs and goals..." rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Book Free AI Consultation</button>
+        </form>
+        
+
+    </div>
+</section>
+
+
+<!-- ✅ WhatsApp Script YAHAN -->
+<!-- ✅ WhatsApp Script -->
+<script>
+document.querySelector(".consultation-form").addEventListener("submit", function(e){
+    e.preventDefault(); // prevent actual form submission
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let business = document.getElementById("business").value;
+    let message = document.getElementById("message").value;
+
+    let text = `New Lead 🚀
+Name: ${name}
+Phone: ${phone}
+Business: ${business}
+Message: ${message}`;
+
+    // Change the number to your WhatsApp number
+    let whatsappURL = `https://wa.me/9528951373?text=${encodeURIComponent(text)}`;
+    window.open(whatsappURL, "_blank");
+
+
+    // ✅ Thank you message
+    alert("Thank you! Your message has been sent via WhatsApp. We will contact you soon.");
+
+});
+</script>
+{% endblock %}
+

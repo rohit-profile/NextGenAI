@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}
+Pricing - NextGen AI
+{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='pricing.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<h1>Pricing</h1>
+<p>Choose a plan that fits your business. Our AI Agency provides automation, chatbots, marketing AI, and custom solutions.</p>
+
+<div class="grid">
+
+<!-- Starter Plan -->
+<div class="card">
+
+<h2>Starter</h2>
+<p><strong>Custom Pricing</strong></p>
+<p>Best for small businesses starting with AI.</p>
+
+<ul>
+<li>AI Chatbot for Website</li>
+<li>Basic Workflow Automation</li>
+<li>AI Content Generator (Blogs & Posts)</li>
+<li>Email Automation</li>
+<li>Basic Lead Capture Bot</li>
+<li>1 Landing Page Automation</li>
+<li>Basic Analytics Dashboard</li>
+<li>Email Support</li>
+</ul>
+
+<p><strong>Perfect for:</strong> Startups & small websites</p>
+
+</div>
+
+
+<!-- Pro Plan -->
+<div class="card">
+
+<h2>Pro</h2>
+<p><strong>Custom Pricing </strong></p>
+<p>Best for growing businesses that want marketing automation.</p>
+
+<ul>
+<li>Everything in Starter</li>
+<li>Advanced AI Automation</li>
+<li>AI Marketing Assistant</li>
+<li>Social Media Content Generator</li>
+<li>AI Sales Funnel Setup</li>
+<li>AI Lead Qualification Bot</li>
+<li>Voice AI Agent</li>
+<li>CRM Integration</li>
+<li>Advanced Analytics</li>
+<li>Priority Support</li>
+</ul>
+
+<p><strong>Perfect for:</strong> Online businesses & agencies</p>
+
+</div>
+
+
+<!-- Enterprise Plan -->
+<div class="card">
+
+<h2>Enterprise</h2>
+<p><strong>Custom Pricing</strong></p>
+<p>Complete AI transformation for large businesses.</p>
+
+<ul>
+<li>Everything in Pro</li>
+<li>Custom AI Tools Development</li>
+<li>Full Business Automation</li>
+<li>Custom AI Chatbots</li>
+<li>AI Voice Call Agents</li>
+<li>AI Customer Support System</li>
+<li>AI Marketing Automation System</li>
+<li>Custom API Integrations</li>
+<li>Dedicated AI Consultant</li>
+<li>24/7 Premium Support</li>
+</ul>
+
+<p><strong>Perfect for:</strong> Enterprises & high-scale businesses</p>
+
+</div>
+
+</div>
+
+{% endblock %}

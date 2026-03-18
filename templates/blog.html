@@ -1,0 +1,349 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+Blog - NextGen AI
+{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='blog.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="insights-header">
+
+<h1>AI Insights</h1>
+
+<p>
+Welcome to our AI Insights hub where we share the latest knowledge, strategies,
+and tools in Artificial Intelligence, Automation, and Digital Transformation.
+Learn how businesses are using AI to increase productivity, automate operations,
+and scale faster than ever.
+</p>
+
+</section>
+
+
+<section class="insights-search">
+
+<h2>Search Insights</h2>
+
+<input type="text" placeholder="Search AI articles..." class="search-box">
+
+<button class="search-btn">Search</button>
+
+</section>
+
+
+
+<section class="insights-categories">
+
+<h2>Categories</h2>
+
+<ul>
+
+<li>AI Automation</li>
+
+<li>AI Marketing</li>
+
+<li>AI Chatbots</li>
+
+<li>AI Tools</li>
+
+<li>Business Growth</li>
+
+<li>Machine Learning</li>
+
+<li>AI Strategy</li>
+
+<li>Future Technology</li>
+
+</ul>
+
+</section>
+
+
+
+<section class="insights-grid">
+
+
+
+<!-- Article 1 -->
+
+<div class="insight-card">
+
+<h3>How AI Automation Saves 100+ Hours</h3>
+
+<p class="meta">
+Author: AI Agency Team | Category: Automation | Read Time: 5 min
+</p>
+
+<p>
+AI automation allows businesses to eliminate repetitive tasks
+such as data entry, lead qualification, and customer responses.
+Companies using automation often save more than 100 hours per month.
+</p>
+
+<p>
+For example, customer support chatbots can answer thousands of
+questions automatically while workflow automation tools handle
+emails, CRM updates, and scheduling tasks.
+</p>
+
+<p>
+Businesses implementing AI automation see improvements in
+efficiency, cost reduction, and scalability.
+</p>
+
+<button class="read-more">Read More</button>
+
+</div>
+
+
+
+<!-- Article 2 -->
+
+<div class="insight-card">
+
+<h3>The Future of AI Marketing</h3>
+
+<p class="meta">
+Author: AI Marketing Team | Category: AI Marketing | Read Time: 6 min
+</p>
+
+<p>
+AI marketing is transforming how companies attract and retain customers.
+Advanced AI algorithms analyze customer behavior, predict trends,
+and personalize marketing campaigns in real time.
+</p>
+
+<p>
+With AI-powered marketing tools, businesses can automatically generate
+social media posts, email campaigns, and targeted advertisements.
+</p>
+
+<p>
+This results in higher engagement, better conversion rates,
+and more efficient marketing operations.
+</p>
+
+<button class="read-more">Read More</button>
+
+</div>
+
+
+
+<!-- Article 3 -->
+
+<div class="insight-card">
+
+<h3>Top AI Tools for Business</h3>
+
+<p class="meta">
+Author: Tech Research Team | Category: AI Tools | Read Time: 7 min
+</p>
+
+<p>
+Modern businesses are adopting AI tools for automation,
+content creation, customer service, and analytics.
+</p>
+
+<p>
+Some popular categories of AI tools include:
+</p>
+
+<ul>
+
+<li>AI writing tools</li>
+
+<li>AI automation platforms</li>
+
+<li>AI analytics dashboards</li>
+
+<li>AI chatbots</li>
+
+<li>AI design tools</li>
+
+</ul>
+
+<p>
+Choosing the right tools can significantly increase productivity
+and reduce operational costs.
+</p>
+
+<button class="read-more">Read More</button>
+
+</div>
+
+
+
+<!-- Article 4 -->
+
+<div class="insight-card">
+
+<h3>How Chatbots Increase Sales</h3>
+
+<p class="meta">
+Author: Customer Experience Team | Category: Chatbots | Read Time: 5 min
+</p>
+
+<p>
+AI chatbots can interact with customers instantly and provide
+product recommendations, answer questions, and guide users
+through the purchasing process.
+</p>
+
+<p>
+Many companies report sales increases of 20–40% after
+implementing chatbot systems.
+</p>
+
+<p>
+Chatbots also help qualify leads and capture customer
+information for follow-up marketing campaigns.
+</p>
+
+<button class="read-more">Read More</button>
+
+</div>
+
+
+
+<!-- Article 5 -->
+
+<div class="insight-card">
+
+<h3>AI for Small Businesses</h3>
+
+<p class="meta">
+Author: Business Strategy Team | Category: Business Growth
+</p>
+
+<p>
+Small businesses can benefit greatly from AI tools.
+Automation reduces manual work and allows small teams
+to operate like large organizations.
+</p>
+
+<ul>
+
+<li>Automated customer support</li>
+
+<li>AI-generated marketing content</li>
+
+<li>Lead generation bots</li>
+
+<li>Automated sales pipelines</li>
+
+</ul>
+
+<p>
+With the right strategy, AI can give small businesses
+a powerful competitive advantage.
+</p>
+
+<button class="read-more">Read More</button>
+
+</div>
+
+
+
+<!-- Article 6 -->
+
+<div class="insight-card">
+
+<h3>AI Voice Agents for Customer Support</h3>
+
+<p class="meta">
+Author: Voice AI Team | Category: Voice AI
+</p>
+
+<p>
+Voice AI agents are transforming customer support.
+They can answer phone calls, schedule appointments,
+and assist customers without human intervention.
+</p>
+
+<p>
+Businesses using voice AI reduce support costs
+while improving response time and availability.
+</p>
+
+<button class="read-more">Read More</button>
+
+</div>
+
+
+
+</section>
+
+
+
+<section class="newsletter">
+
+<h2>Subscribe to AI Insights</h2>
+
+<p>
+Get the latest AI strategies, automation tips, and industry
+insights delivered directly to your inbox.
+</p>
+
+<form>
+
+<input type="email" placeholder="Enter your email">
+
+<button type="submit">Subscribe</button>
+
+</form>
+
+</section>
+
+
+
+<section class="popular-topics">
+
+<h2>Popular Topics</h2>
+
+<div class="topics-grid">
+
+<div class="topic">AI Automation</div>
+
+<div class="topic">AI Chatbots</div>
+
+<div class="topic">Marketing AI</div>
+
+<div class="topic">AI Voice Agents</div>
+
+<div class="topic">Machine Learning</div>
+
+<div class="topic">Business Automation</div>
+
+<div class="topic">AI Analytics</div>
+
+<div class="topic">Future of AI</div>
+
+</div>
+
+</section>
+
+
+
+<section class="cta">
+
+<h2>Need AI for Your Business?</h2>
+
+<p>
+Our AI Agency helps companies automate operations,
+increase sales, and scale faster using intelligent AI systems.
+</p>
+
+<button class="cta-btn">
+Book Free AI Consultation
+</button>
+
+</section>
+
+
+
+{% endblock %}

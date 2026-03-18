@@ -1,0 +1,200 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  --primary: #a8a3fd;
+  --secondary: #00c9a7;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gradient: linear-gradient(135deg, #9d97fd, #00c9a7);
+  --text-light: #fcfcfc;
+}
+
+/* GLOBAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-light);
+  position: relative;
+  line-height: 1.6;
+  min-height: 100vh;
+
+  /* Remove previous solid background */
+  background: none;
+}
+
+/* AI-themed translucent background behind all content */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* AI background with dark semi-transparent overlay */
+  background:
+    linear-gradient(rgba(171, 194, 247, 0.6), rgba(15, 23, 42, 0.85)),
+    url('/static/images/bg-services-ai.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* soft glassy blur */
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+/* HEADER */
+h1 {
+  text-align: center;
+  font-size: 42px;
+  margin: 40px 0 10px;
+  color: var(--primary);
+}
+
+p {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  color: #f8f9fa;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 50px 8%;
+}
+
+/* CARD WITH GLASS EFFECT */
+.card {
+  background: rgba(255, 255, 255, 0.07); /* translucent glass */
+  backdrop-filter: blur(12px);          /* glassy blur */
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  color: #fff; /* ensure light text */
+}
+
+/* GLOW HOVER EFFECT */
+
+
+
+
+
+.card {
+  background: rgba(255,255,255,0.07); 
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 25px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.card h3,
+.card p,
+.card ul li {
+  color: #fff;
+}
+
+
+
+
+/* PLAN TITLE */
+.card h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+
+/* PRICE */
+.card strong {
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+/* LIST */
+.card ul {
+  margin: 20px 0;
+  padding-left: 18px;
+}
+
+.card li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+/* PERFECT FOR */
+.card p:last-child {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* FEATURED PLAN */
+.card:nth-child(2) {
+  border: 2px solid var(--primary);
+  transform: scale(1.05);
+}
+
+.card:nth-child(2)::before {
+  content: "Most Popular";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* BUTTON */
+.btn {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 25px;
+  background: var(--gradient);
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  .grid {
+    padding: 30px 5%;
+  }
+
+  .card:nth-child(2) {
+    transform: scale(1);
+  }
+}

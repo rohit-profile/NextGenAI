@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}
+AI Marketing - NextGen AI
+{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='marketing.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<h1>AI Powered Marketing Solutions</h1>
+<p>Unlock the power of AI to drive smarter marketing, improve engagement, and boost your ROI.</p>
+
+<div class="grid">
+
+  <!-- AI Lead Generation -->
+  <div class="card">
+    <h3>AI Lead Generation</h3>
+    <p>Automate lead discovery and qualification using intelligent AI algorithms. Focus on leads that matter and increase conversion rates.</p>
+    <ul>
+      <li>Predictive lead scoring</li>
+      <li>AI-driven prospecting</li>
+      <li>Automated data enrichment</li>
+      <li>Integration with CRM systems</li>
+    </ul>
+  </div>
+
+  <!-- AI Email Marketing -->
+  <div class="card">
+    <h3>AI Email Marketing</h3>
+    <p>Personalize every email based on customer behavior and preferences. AI helps you optimize timing, subject lines, and content.</p>
+    <ul>
+      <li>Dynamic content suggestions</li>
+      <li>Automated A/B testing</li>
+      <li>Email segmentation based on AI predictions</li>
+      <li>Click-through rate optimization</li>
+    </ul>
+  </div>
+
+  <!-- AI Ad Optimization -->
+  <div class="card">
+    <h3>AI Ad Optimization</h3>
+    <p>Maximize your advertising ROI with AI that tests, adjusts, and predicts the best ad performance across platforms.</p>
+    <ul>
+      <li>Real-time bid optimization</li>
+      <li>Predictive audience targeting</li>
+      <li>AI-generated ad creatives</li>
+      <li>Cross-platform analytics</li>
+    </ul>
+  </div>
+
+  <!-- AI SEO Content -->
+  <div class="card">
+    <h3>AI SEO Content</h3>
+    <p>Create optimized content that ranks higher on search engines. AI analyzes trends and suggests keywords to maximize traffic.</p>
+    <ul>
+      <li>Automated keyword research</li>
+      <li>Content gap analysis</li>
+      <li>AI writing suggestions</li>
+      <li>SEO-friendly blog generation</li>
+    </ul>
+  </div>
+
+  <!-- AI Social Media Automation -->
+  <div class="card">
+    <h3>AI Social Media Automation</h3>
+    <p>Schedule, post, and analyze social media campaigns with AI. Focus on content that drives engagement and builds brand loyalty.</p>
+    <ul>
+      <li>Smart posting schedule</li>
+      <li>AI-driven engagement insights</li>
+      <li>Automated content suggestions</li>
+      <li>Social listening and trend analysis</li>
+    </ul>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Case Studies Section -->
+<section id="case-studies">
+  <h2>AI Marketing in Action</h2>
+  <p>See how leading brands are using AI to transform their marketing strategies.</p>
+  
+  <div class="case-study">
+    <h3>Boosting Conversions with AI Email Campaigns</h3>
+    <p>Company X used AI email personalization to increase open rates by 45% and revenue by 30% in just 3 months.</p>
+  </div>
+
+  <div class="case-study">
+    <h3>AI-Powered SEO Content for Growth</h3>
+    <p>Company Y implemented AI-generated content, increasing organic search traffic by 60% year-over-year.</p>
+  </div>
+
+  <div class="case-study">
+    <h3>Maximizing Ad ROI through AI</h3>
+    <p>Company Z used AI ad optimization tools, reducing ad spend by 20% while increasing conversions by 50%.</p>
+  </div>
+</section>
+
+<hr>
+
+<!-- Features Section -->
+<section id="features">
+  <h2>Why Choose AI Marketing?</h2>
+  <div class="grid">
+    <div class="feature-card">
+      <h4>Time Savings</h4>
+      <p>Automate repetitive marketing tasks so your team can focus on strategy and creativity.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Data-Driven Decisions</h4>
+      <p>AI analyzes vast amounts of data in seconds to provide actionable insights.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Personalization at Scale</h4>
+      <p>Deliver the right message to the right customer at the right time, automatically.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Optimized ROI</h4>
+      <p>Improve campaign efficiency and reduce wasted ad spend through AI insights.</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- Testimonials Section -->
+<section id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <blockquote>
+    "Since implementing AI-driven marketing, our lead quality and sales have skyrocketed. The insights are invaluable." – Marketing Director, Company A
+  </blockquote>
+  <blockquote>
+    "AI content suggestions help our team produce more engaging and SEO-friendly content faster than ever." – Content Manager, Company B
+  </blockquote>
+  <blockquote>
+    "We cut ad spend while increasing engagement thanks to AI-powered ad optimization." – Digital Marketing Lead, Company C
+  </blockquote>
+</section>
+
+<hr>
+
+<!-- Call to Action -->
+<section id="cta">
+  <h2>Get Started with AI Marketing Today</h2>
+  <p>Transform your marketing strategy with AI-powered solutions. Schedule a demo or start a free trial now.</p>
+  <a href="/contact" class="btn">Schedule a Demo</a>
+  <a href="/signup" class="btn btn-primary">Start Free Trial</a>
+</section>
+
+{% endblock %}

@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  --primary: #6c63ff;
+  --secondary: #00c9a7;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gradient: linear-gradient(135deg, #6c63ff, #00c9a7);
+  --text-light: #f1f5f9;
+}
+
+/* GLOBAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-light);
+  background: var(--dark);
+  position: relative;
+  line-height: 1.6;
+}
+
+/* 🔥 FULL-BACKGROUND */
+/* 🔥 FULL-BACKGROUND WITH TRANSPARENT AI OVERLAY */
+body {
+  min-height: 100vh;
+  color: #f1f5f9; /* light text */
+  position: relative;
+  line-height: 1.6;
+
+  /* Semi-transparent overlay + AI background */
+  background: url('/static/images/bg-services-ai.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* Overlay with transparency */
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Transparent dark overlay */
+  background: rgba(15, 23, 42, 0.6); /* adjust opacity 0.5–0.85 */
+  backdrop-filter: blur(6px);        /* optional glass blur */
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1; /* ensures content is above overlay */
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  opacity: 0.9;
+  color: var(--text-light);
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: var(--gradient);
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 0;
+  color: var(--text-light);
+}
+
+/* SECTION TITLES */
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 25px;
+}
+
+.mission-vision .grid,
+.services .grid,
+.process .grid,
+.industries .grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* CARD / GLASS EFFECT */
+.card {
+  background: rgba(255,255,255,0.07);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* TECHNOLOGIES */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.tech-list li {
+  background: rgba(255,255,255,0.07);
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--text-light);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.tech-list li:hover {
+  background: var(--gradient);
+  color: white;
+}
+
+/* BENEFITS */
+.benefits {
+  max-width: 700px;
+  margin: auto;
+  list-style: none;
+}
+
+.benefits li {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+/* INDUSTRIES */
+.industries .grid span {
+  background: rgba(255,255,255,0.07);
+  padding: 15px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 500;
+  color: var(--text-light);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.industries .grid span:hover {
+  background: var(--gradient);
+  color: white;
+}
+
+/* CTA */
+.cta {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta h2 {
+  color: var(--secondary);
+}
+
+.cta p {
+  margin: 15px auto;
+  max-width: 600px;
+  opacity: 0.8;
+}
+
+.cta .btn-primary {
+  background: var(--gradient);
+  color: white;
+}
+
+.cta .btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}

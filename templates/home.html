@@ -1,0 +1,919 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home - NextGen AI
+{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+    <!-- CTA BUTTON -->
+
+       
+    <div class="navbar-cta">
+      <a href="/contact" class="btn-primary">Get Consultation</a>
+    </div>
+
+
+
+    <!-- MOBILE MENU TOGGLE -->
+    <div class="navbar-toggle">
+      <span>☰</span>
+    </div>
+
+  </div>
+</header>
+
+
+
+<!-- HERO -->
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+
+<!-- LEFT CONTENT -->
+
+<div class="hero-content">
+
+<h1 class="gradient-text">NextGen AI Agency</h1>
+
+<h2>Automate, Scale & Grow Your Business with AI</h2>
+
+<p class="hero-description">
+We build intelligent AI systems that help businesses automate workflows,
+improve customer experience and increase productivity.
+Our AI solutions enable companies to scale faster and stay ahead
+in the digital economy.
+</p>
+
+
+<!-- HERO FEATURES -->
+
+<div class="hero-features">
+
+<div class="hero-feature">
+<span>⚡</span>
+<p>AI Workflow Automation</p>
+</div>
+
+<div class="hero-feature">
+<span>🤖</span>
+<p>Smart AI Chatbots</p>
+</div>
+
+<div class="hero-feature">
+<span>📊</span>
+<p>Business Intelligence</p>
+</div>
+
+<div class="hero-feature">
+<span>🚀</span>
+<p>Growth Automation</p>
+</div>
+
+</div>
+
+
+<!-- BUTTONS -->
+
+<div class="hero-buttons">
+
+<a class="btn-primary" href="/contact">
+Get Free AI Consultation
+</a>
+
+<a class="btn-secondary" href="/services">
+Explore AI Solutions
+</a>
+
+</div>
+
+
+<!-- TRUST STATS -->
+
+<div class="hero-stats">
+
+<div class="hero-stat">
+<h3>50+</h3>
+<p>AI Projects</p>
+</div>
+
+<div class="hero-stat">
+<h3>30+</h3>
+<p>Happy Clients</p>
+</div>
+
+<div class="hero-stat">
+<h3>5+</h3>
+<p>Years Experience</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RIGHT HERO IMAGE -->
+
+<div class="hero-image">
+
+<img src="{{ url_for('static', filename='images/portfolio-analytics.jpg') }}"></div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- CLIENTS -->
+
+<!-- CLIENTS -->
+
+<section class="clients">
+
+<div class="clients-container">
+
+<h2 class="section-title">Trusted by Modern Businesses</h2>
+
+<p class="section-subtitle">
+Leading startups and global companies trust our AI solutions
+to automate workflows, improve productivity and accelerate growth.
+</p>
+
+<div class="clients-grid">
+
+
+
+<div class="client-logo">
+<img src="{{ url_for('static', filename='images/aws.svg') }}">
+</div>
+
+<div class="client-logo">
+<img src="{{ url_for('static', filename='images/apple.svg') }}">
+</div>
+
+<div class="client-logo">
+<img src="{{ url_for('static', filename='images/facebook.svg') }}">
+</div>
+
+<div class="client-logo">
+<img src="{{ url_for('static', filename='images/github.svg') }}">
+</div>
+
+<div class="client-logo">
+<img src="{{ url_for('static', filename='images/slack.svg') }}">
+</div>
+
+<div class="client-logo">
+<img src="{{ url_for('static', filename='images/docker.svg') }}">
+</div>
+
+<div class="client-logo">
+<img src="{{ url_for('static', filename='images/google.svg') }}">
+</div>
+
+<div class="client-logo">
+<img src="{{ url_for('static', filename='images/microsoft.svg') }}">
+</div>
+
+
+
+</div>
+
+
+<!-- TRUST STATS -->
+
+<!-- TRUST STATS SECTION -->
+<section id="trust-stats" class="client-stats-section">
+  <div class="container">
+
+    <h2>Our Achievements</h2>
+    <p>We are committed to delivering high-quality AI solutions to clients worldwide.</p>
+
+    <div class="client-stats">
+
+      <div class="stat">
+        <h3>50+</h3>
+        <p>AI Projects Delivered</p>
+      </div>
+
+      <div class="stat">
+        <h3>30+</h3>
+        <p>Global Clients</p>
+      </div>
+
+      <div class="stat">
+        <h3>98%</h3>
+        <p>Client Satisfaction</p>
+      </div>
+
+      <div class="stat">
+        <h3>10+</h3>
+        <p>Awards Won</p>
+      </div>
+
+      <div class="stat">
+        <h3>25+</h3>
+        <p>Expert Team Members</p>
+      </div>
+
+      <div class="stat">
+        <h3>5+</h3>
+        <p>Years of Experience</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<h2 class="section-title">AI Solutions for Modern Businesses</h2>
+
+<p class="section-subtitle">
+We design and build intelligent AI systems that automate operations,
+increase productivity and unlock new growth opportunities for companies.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<img class="service-img" src="{{ url_for('static', filename='images/service-automation.jpg') }}">
+<h3>AI Workflow Automation</h3>
+
+<p>
+Automate repetitive tasks like emails, data entry, CRM updates and reporting.
+Our AI systems integrate with your existing tools and streamline business processes.
+</p>
+
+<ul>
+<li>Automated CRM updates</li>
+<li>Email response automation</li>
+<li>Task management AI</li>
+<li>Business workflow pipelines</li>
+</ul>
+
+<a class="service-btn">Learn More</a>
+
+</div>
+
+
+<div class="card">
+<img class="service-img" src="{{ url_for('static', filename='images/service-chatbot.jpg') }}">
+<h3>AI Chatbots</h3>
+
+<p>
+Deploy intelligent conversational agents on your website,
+WhatsApp and social media platforms to provide instant support.
+</p>
+
+<ul>
+<li>24/7 customer support</li>
+<li>Lead generation chatbot</li>
+<li>WhatsApp automation</li>
+<li>Multi-language AI</li>
+</ul>
+
+<a class="service-btn">Learn More</a>
+
+</div>
+
+
+<div class="card">
+<img class="service-img" src="{{ url_for('static', filename='images/service-content.jpg') }}">
+<h3>AI Content Creation</h3>
+
+<p>
+Generate high quality blog posts, ads, product descriptions,
+and marketing campaigns using powerful AI models.
+</p>
+
+<ul>
+<li>SEO blog generation</li>
+<li>Ad copywriting AI</li>
+<li>Social media content</li>
+<li>Email marketing automation</li>
+</ul>
+
+<a class="service-btn">Learn More</a>
+
+</div>
+
+
+<div class="card">
+<img class="service-img" src="{{ url_for('static', filename='images/service-voice.jpg') }}">
+<h3>AI Voice Agents</h3>
+
+<p>
+Build human-like AI assistants that can answer phone calls,
+handle customer queries and book appointments automatically.
+</p>
+
+<ul>
+<li>AI call agents</li>
+<li>Customer call automation</li>
+<li>Voice appointment booking</li>
+<li>Speech recognition AI</li>
+</ul>
+
+<a class="service-btn">Learn More</a>
+
+</div>
+
+
+<div class="card">
+<img class="service-img" src="{{ url_for('static', filename='images/service-media.jpg') }}">
+<h3>AI Media Generation</h3>
+
+<p>
+Create stunning marketing visuals, product images,
+and promotional videos using generative AI models.
+</p>
+
+<ul>
+<li>AI image generation</li>
+<li>AI video production</li>
+<li>Marketing creatives</li>
+<li>Brand visuals</li>
+</ul>
+
+<a class="service-btn">Learn More</a>
+
+</div>
+
+
+<div class="card">
+<img class="service-img" src="{{ url_for('static', filename='images/service-analytics.jpg') }}"><h3>AI Data Analytics</h3>
+
+<p>
+Transform raw business data into powerful insights with
+interactive dashboards and predictive analytics.
+</p>
+
+<ul>
+<li>Sales forecasting</li>
+<li>Customer insights</li>
+<li>Business dashboards</li>
+<li>Predictive analytics</li>
+</ul>
+
+<a class="service-btn">Learn More</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+
+
+
+
+<section class="portfolio">
+
+<h2 class="section-title">Our AI Projects</h2>
+
+<p class="section-subtitle">
+Explore some of the intelligent systems we have built for startups,
+enterprises and modern digital businesses.
+</p>
+
+<div class="grid">
+
+
+
+
+
+
+
+<!-- 1 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-sales.jpg') }}">
+<h3>AI Sales Forecasting Dashboard</h3>
+<p>Predict future revenue using ML models and interactive dashboards.</p>
+</div>
+
+<!-- 2 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-chatbot.jpg') }}">
+<h3>Customer Support Chatbot</h3>
+<p>Automated AI chatbot for websites and WhatsApp.</p>
+</div>
+
+<!-- 3 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-marketing.jpg') }}">
+<h3>Marketing Automation Platform</h3>
+<p>AI powered campaign automation system.</p>
+</div>
+
+<!-- 4 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-recommendation.jpg') }}">
+<h3>AI Recommendation Engine</h3>
+<p>Product recommendation system using ML.</p>
+</div>
+
+<!-- 5 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-fraud.jpg') }}">
+<h3>Fraud Detection System</h3>
+<p>AI model that detects financial fraud patterns.</p>
+</div>
+
+<!-- 6 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/ai-voice.jpg') }}">
+<h3>AI Voice Assistant</h3>
+<p>Voice controlled assistant for business automation.</p>
+</div>
+
+<!-- 7 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-document.jpg') }}">
+<h3>Document Processing AI</h3>
+<p>Extract data from invoices and documents automatically.</p>
+</div>
+
+<!-- 8 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-cv.jpg') }}">
+<h3>Computer Vision Inspection</h3>
+<p>AI system for defect detection in manufacturing.</p>
+</div>
+
+<!-- 9 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-sentiment.jpg') }}">
+<h3>Sentiment Analysis Platform</h3>
+<p>Analyze customer feedback using NLP.</p>
+</div>
+
+<!-- 10 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-leads.jpg') }}">
+<h3>AI Lead Generation System</h3>
+<p>Automated system to capture and qualify leads.</p>
+</div>
+
+<!-- 11 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-email.jpg') }}">
+<h3>Email Marketing AI</h3>
+<p>AI generated campaigns and automated email flows.</p>
+</div>
+
+<!-- 12 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-pricing.jpg') }}">
+<h3>Dynamic Pricing AI</h3>
+<p>Adjust prices automatically using demand prediction.</p>
+</div>
+
+<!-- 13 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-recruitment.jpg') }}">
+<h3>AI Recruitment Screening</h3>
+<p>Resume screening using machine learning.</p>
+</div>
+
+<!-- 14 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-analytics.jpg') }}">
+<h3>AI Business Analytics</h3>
+<p>AI dashboards for deep business insights.</p>
+</div>
+
+<!-- 15 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-inventory.jpg') }}">
+<h3>Inventory Optimization AI</h3>
+<p>Predict stock demand and optimize inventory.</p>
+</div>
+
+<!-- 16 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-social.jpg') }}">
+<h3>Social Media AI</h3>
+<p>AI generated posts and engagement tracking.</p>
+</div>
+
+<!-- 17 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/ai-video.jpg') }}">
+<h3>AI Video Generator</h3>
+<p>Create marketing videos using generative AI.</p>
+</div>
+
+<!-- 18 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-translation.jpg') }}">
+<h3>AI Translation System</h3>
+<p>Real-time language translation AI.</p>
+</div>
+
+<!-- 19 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-education.jpg') }}">
+<h3>AI Education Platform</h3>
+<p>Personalized AI learning system.</p>
+</div>
+
+<!-- 20 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-health.jpg') }}">
+<h3>Healthcare Diagnosis AI</h3>
+<p>Medical image analysis using AI.</p>
+</div>
+
+<!-- 21 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-ecommerce.jpg') }}">
+<h3>AI Ecommerce Assistant</h3>
+<p>Smart shopping assistant chatbot.</p>
+</div>
+
+<!-- 22 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-logistics.jpg') }}">
+<h3>Logistics Optimization AI</h3>
+<p>AI route optimization for deliveries.</p>
+</div>
+
+<!-- 23 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-finance.jpg') }}">
+<h3>AI Finance Advisor</h3>
+<p>AI financial planning assistant.</p>
+</div>
+
+<!-- 24 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-customer.jpg') }}">
+<h3>Customer Behavior Prediction</h3>
+<p>Predict churn and engagement.</p>
+</div>
+
+<!-- 25 -->
+<div class="project">
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-automation.jpg') }}">
+<h3>Business Process Automation</h3>
+<p>Automate workflows with AI agents.</p>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<div class="project">
+
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-chatbot.jpg') }}">
+
+
+<h3>Customer Support Chatbot</h3>
+
+<p>
+An intelligent AI chatbot integrated with website and WhatsApp
+to automate customer support and increase conversion rates.
+</p>
+
+<ul>
+<li>24/7 AI Support</li>
+<li>Lead Capture</li>
+<li>Smart Conversation AI</li>
+</ul>
+
+</div>
+
+
+<div class="project">
+
+<img class="project-img" src="{{ url_for('static', filename='images/portfolio-marketing.jpg') }}">
+<h3>Marketing Automation Platform</h3>
+
+<p>
+AI-powered marketing system that automatically runs campaigns,
+generates content and tracks customer engagement.
+</p>
+
+<ul>
+<li>AI Campaign Management</li>
+<li>Email Marketing AI</li>
+<li>Customer Analytics</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TEAM -->
+<!-- TEAM -->
+<section class="team">
+
+  <h2 class="section-title">Our AI Experts</h2>
+
+  <div class="grid">
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Rohan Sharma – AI Engineer</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Aditi Mehta – Data Scientist</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Vikram Singh – Automation Specialist</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Priya Kapoor – Machine Learning Engineer</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Arjun Verma – AI Researcher</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Neha Reddy – Deep Learning Specialist</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Sameer Joshi – Computer Vision Engineer</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Shreya Nair – NLP Engineer</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Aditya Patel – Robotics Engineer</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Kavita Singh – AI Strategist</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Ritesh Kumar – Data Analyst</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Ananya Sharma – AI Product Manager</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Manish Choudhary – Cloud AI Engineer</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Priyanka Desai – Reinforcement Learning Engineer</h3>
+    </div>
+
+    <div class="team-card">
+      <img src="{{ url_for('static', filename='images/team11.jpg') }}">
+      <h3>Deepak Rao – AI Ethics Specialist</h3>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BLOG -->
+
+<section class="blog">
+
+<h2 class="section-title">Latest AI Insights</h2>
+
+<p class="section-subtitle">
+Stay updated with the latest trends in Artificial Intelligence,
+automation, machine learning and digital transformation.
+</p>
+
+<div class="grid">
+
+
+<!-- BLOG 1 -->
+
+<div class="blog-card">
+
+
+<img class="blog-img" src="{{ url_for('static', filename='images/blog1.jpg') }}">
+
+<div class="blog-content">
+
+<span class="blog-category">Automation</span>
+
+<h3>How AI Automation Saves 100+ Hours for Businesses</h3>
+
+<p>
+AI automation helps businesses eliminate repetitive tasks,
+reduce operational costs and increase productivity.
+Learn how companies are saving hundreds of hours using AI workflows.
+</p>
+
+<div class="blog-meta">
+
+<span>By Admin</span>
+<span>March 2026</span>
+
+</div>
+
+<a class="blog-btn">Read Article</a>
+
+</div>
+
+</div>
+
+
+<!-- BLOG 2 -->
+
+<div class="blog-card">
+
+<img class="blog-img" src="{{ url_for('static', filename='images/blog2.jpg') }}">
+
+
+<div class="blog-content">
+
+<span class="blog-category">AI Trends</span>
+
+<h3>The Future of AI in Modern Business</h3>
+
+<p>
+Artificial Intelligence is transforming industries from
+finance to healthcare. Discover how AI will reshape
+business operations in the next decade.
+</p>
+
+<div class="blog-meta">
+
+<span>By Admin</span>
+<span>March 2026</span>
+
+</div>
+
+<a class="blog-btn">Read Article</a>
+
+</div>
+
+</div>
+
+
+<!-- BLOG 3 -->
+
+<div class="blog-card">
+
+<img class="blog-img" src="{{ url_for('static', filename='images/blog3.jpg') }}">
+
+<div class="blog-content">
+
+<span class="blog-category">Marketing</span>
+
+<h3>AI Marketing Guide for Startups</h3>
+
+<p>
+Learn how startups can use AI tools to automate
+marketing campaigns, generate content and improve
+customer engagement.
+</p>
+
+<div class="blog-meta">
+
+<span>By Admin</span>
+<span>March 2026</span>
+
+</div>
+
+<a class="blog-btn">Read Article</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="cta-container">
+
+<h2>Ready to Transform Your Business with AI?</h2>
+
+<p class="cta-subtitle">
+Join hundreds of modern companies using Artificial Intelligence
+to automate workflows, increase productivity and scale faster.
+Our AI experts will help you discover the best automation
+and AI solutions for your business.
+</p>
+
+<div class="cta-features">
+
+<div class="cta-feature">
+<span>⚡</span>
+<p>Automate repetitive business tasks</p>
+</div>
+
+<div class="cta-feature">
+<span>🤖</span>
+<p>Deploy AI chatbots & voice agents</p>
+</div>
+
+<div class="cta-feature">
+<span>📊</span>
+<p>Get powerful data insights & dashboards</p>
+</div>
+
+<div class="cta-feature">
+<span>🚀</span>
+<p>Scale your business with AI technology</p>
+</div>
+
+</div>
+
+<div class="cta-buttons">
+
+<a class="btn-primary" href="/contact">Schedule Free Consultation</a>
+
+<a class="btn-secondary" href="/services">Explore AI Solutions</a>
+
+</div>
+
+
+<div class="cta-stats">
+
+<div class="stat">
+<h3>50+</h3>
+<p>AI Projects Delivered</p>
+</div>
+
+<div class="stat">
+<h3>30+</h3>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat">
+<h3>10+</h3>
+<p>AI Experts</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}   

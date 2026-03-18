@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{% block title %}NextGen AI Agency{% endblock %}</title>
+
+<meta name="description" content="NextGen AI Agency helps businesses automate workflows, build AI chatbots, and scale using intelligent AI systems.">
+
+<link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+
+{% block page_css %}{% endblock %}
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+<div class="container">
+
+<div class="logo">
+<a href="{{ url_for('home') }}">NextGen <span>AI</span></a>
+</div>
+
+<nav class="nav">
+
+<a href="{{ url_for('home') }}">Home</a>
+<a href="{{ url_for('services') }}">AI Services</a>
+<a href="{{ url_for('marketing') }}">AI Marketing</a>
+<a href="{{ url_for('portfolio') }}">Portfolio</a>
+<a href="{{ url_for('pricing') }}">Pricing</a>
+<a href="{{ url_for('blog') }}">Blog</a>
+<a href="{{ url_for('about') }}">About</a>
+<a href="{{ url_for('contact') }}">Contact</a>
+
+</nav>
+
+<div class="header-btn">
+
+<a href="{{ url_for('contact') }}" class="btn-nav">
+Free Consultation
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- PAGE CONTENT -->
+
+<main class="main-content">
+
+{% block content %}
+{% endblock %}
+
+</main>
+
+
+<!-- CTA SECTION -->
+
+<section class="site-cta">
+
+<div class="cta-container">
+
+<h2>Ready to Transform Your Business with AI?</h2>
+
+<p>
+Let our AI experts design automation systems that
+save time, reduce costs and accelerate growth.
+</p>
+
+<a href="{{ url_for('contact') }}" class="cta-button">
+Start Your AI Project
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- COMPANY -->
+
+<div class="footer-column">
+
+<h3>NextGen AI</h3>
+
+<p>
+We build intelligent AI systems that automate workflows, boost productivity, and help businesses scale faster.
+</p>
+
+<!-- Key Points -->
+<div class="key-points">
+
+<!-- Font Awesome CDN (icons ke liye) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="key-points">
+
+  <div class="point-card">AI-Powered Automation</div>
+
+  <div class="point-card">Data-Driven Insights</div>
+
+  <div class="point-card">Custom AI Solutions</div>
+
+  <div class="point-card">Machine Learning Integration</div>
+
+  <div class="point-card">Business Process Optimization</div>
+
+  <div class="point-card">Cloud-Based AI Systems</div>
+
+  <div class="point-card">Real-Time Analytics</div>
+
+  <div class="point-card">24/7 AI Support Systems</div>
+
+</div>
+
+<!-- Social Media Icons -->
+<div class="social-icons">
+
+  <a href="#"><i class="fab fa-linkedin"></i></a>
+
+  <a href="#"><i class="fab fa-twitter"></i></a>
+
+  <a href="#"><i class="fab fa-facebook"></i></a>
+
+  <a href="#"><i class="fab fa-github"></i></a>
+
+  <a href="#"><i class="fab fa-instagram"></i></a>
+
+  <a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+
+
+<!-- SERVICES -->
+
+<div class="footer-column">
+
+<h4>AI Services</h4>
+
+<a href="#">AI Automation</a>
+<a href="#">AI Chatbots</a>
+<a href="#">Voice Agents</a>
+<a href="#">AI Marketing</a>
+<a href="#">Data Analytics</a>
+
+<a href="#">AI Lead Generation</a>
+<a href="#">AI Email Marketing</a>
+<a href="#">AI Ad Optimization</a>
+<a href="#">AI SEO Content</a>
+<a href="#">AI Social Media Automation</a>
+<a href="#">AI Content Creation</a>
+<a href="#">AI Chatbots & Support</a>
+<a href="#">AI Voice Agents</a>
+<a href="#">AI Data Analytics & Insights</a>
+<a href="#">AI Recommendation Engines</a>
+<a href="#">AI Image & Video Generation</a>
+<a href="#">AI Customer Personalization</a>
+<a href="#">AI Predictive Modeling</a>
+
+</div>
+
+
+<!-- COMPANY -->
+
+<div class="footer-column">
+
+<h4>Company</h4>
+
+<a href="{{ url_for('about') }}">About Us</a>
+<a href="{{ url_for('portfolio') }}">Projects</a>
+<a href="{{ url_for('pricing') }}">Pricing</a>
+<a href="{{ url_for('blog') }}">Blog</a>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="footer-column">
+
+<h4>Contact</h4>
+
+<p>Email: u52046331@gmail.com</p>
+<p>Phone: +91-9528951373</p>
+<p>Location: Noida, India</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>© 2026 NextGen AI Agency — All Rights Reserved</p>
+
+</div>
+
+</footer>
+
+
+<!-- JS -->
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
