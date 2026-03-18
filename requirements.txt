@@ -1,2 +1,4 @@
 Flask
 email-validator
+jinja2
+gunicorn
